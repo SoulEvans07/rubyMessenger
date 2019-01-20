@@ -32,3 +32,6 @@
 
 # IDE
 /.idea
+
+# dotenv
+.env
