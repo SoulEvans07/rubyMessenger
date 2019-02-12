@@ -1,0 +1,38 @@
+# rubyMessenger
+
+## Models
+
+Organization
+	id
+	owner_id
+	configurations
+OrganizationAdmins
+	organization_id
+	admin_id
+User
+	id
+	organization_id
+	email
+	username
+	password_hash
+	salt
+UserFavoriteChannels
+	user_id
+	channel_id
+Channel
+	id
+	organization_id
+	owner_id
+	name
+ChannelUser
+	channel_id
+	user_id
+Message
+	id
+	channel_id
+	sender_id
+	timestamp
+TextContent
+	message_id
+	text
+DirectMessage extends Channel
