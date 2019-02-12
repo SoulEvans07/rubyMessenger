@@ -23,7 +23,7 @@ class User < ApplicationRecord
   end
 
   def self.authenticate(username, pass)
-    user = User.where(name: username).first
+    user = User.where(username: username).first
     user && user.authenticated?(pass) ? user : nil
   end
 
