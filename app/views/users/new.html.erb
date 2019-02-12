@@ -1,5 +1,22 @@
-<h1>New User</h1>
-
-<%= render 'form', user: @user %>
-
-<%= link_to 'Back', users_path %>
+<div class="register-box">
+  <img class="title-img" src="/imgs/logo.png">
+  <div class="register-text">Sign up to see photos and videos from your friends.</div>
+  <div>
+    <fieldset>
+      <%= form_for :user, url: '/users', method: :post do |form| %>
+        <div class="register-field-box">
+          <%= form.text_field :name, size: 30, class: 'register-field', placeholder: 'Username' %>
+          <%= form.text_field :email, size: 40, class: 'register-field', placeholder: 'Email' %>
+          <%= form.password_field :password, size: 20, class: 'register-field', placeholder: 'Password' %>
+          <%= form.password_field :password_confirmation, size: 20,
+                                  class: 'register-field', placeholder: 'Password confirmation' %>
+        </div>
+        <%= form.submit 'Register', class: 'register-btn' %>
+      <% end %>
+    </fieldset>
+  </div>
+  <br>
+</div>
+<div class="register-box">
+  Have an account? <%= link_to "Log in", welcome_path %>
+</div>

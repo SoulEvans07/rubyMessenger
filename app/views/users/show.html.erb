@@ -1,24 +1,26 @@
-<p id="notice"><%= notice %></p>
+<%#= render 'layouts/userbar', user: @auth_user %>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
-
-<p>
-  <strong>Password hash:</strong>
-  <%= @user.password_hash %>
-</p>
-
-<p>
-  <strong>Salt:</strong>
-  <%= @user.salt %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="user-show profile">
+  <div class="user-show header"></div>
+  <div class="user-show user">
+    <img src="<%= @user.img %>" class="user-show profile-picture">
+    <h3 class="user-show username"><%= @user.name %> (<%= @user.email %>)</h3>
+  </div>
+  <div class="user-show statistics">
+    <div class="user-show stat-padding"></div>
+    <div class="user-show stat-cocktails"><b><%= @user.cocktails.length %></b> cocktails</div>
+    <div class="user-show stat-ingredients"><b><%= @user.ingredients.length %></b> ingredients</div>
+    <div class="user-show stat-notifications"><b><%= @user.notifications.length %></b> notifications</div>
+    <a href="<%= edit_profile_path(@user) %>">
+      <div class="user-show edit-btn"><b>Edit</b></div>
+    </a>
+    <a href="<%= clear_notifs_path(@user) %>">
+      <div class="user-show clear-btn"><b>Clear Notifications</b></div>
+    </a>
+  </div>
+  <div class="list-group user-show notif-list">
+    <% @user.notifications.each do |notif| %>
+      <%= render 'layouts/notif', notif: notif %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="login login-box">
+  <img class="login login-title" src="/imgs/logo.png">
+  <fieldset>
+    <%= form_tag '/sessions/create', method: :post do %>
+      <div class="login login-field-box">
+        <%= text_field_tag 'username', '', class: 'login login-field', placeholder: 'Username' %><br/>
+        <%= password_field_tag 'password', '', class: 'login login-field', placeholder: 'Password' %><br/>
+      </div>
+      <%= submit_tag 'Login', class: 'login login-btn' %>
+    <% end %>
+  </fieldset>
+  <br>
+  <%= link_to "Forgot password?", '/users/forgotten', class: 'login link' %><br>
+</div>
+<div class="login login-box">
+  Don't have an account? <%= link_to "Register", register_path, class: 'login link' %>
+</div>

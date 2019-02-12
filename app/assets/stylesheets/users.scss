@@ -1,3 +1,256 @@
-// Place all the styles related to the Users controller here.
+// Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+a {
+  color: #2e6da4;
+}
+
+.title-img {
+  width: 80%;
+  margin: 10px 0 10px 0;
+}
+
+// - register ----------------------------------------
+
+.register-box {
+  background-color: white;
+  margin: 30px auto auto;
+  padding: 20px;
+  width: 25%;
+  border: solid 1px #bebebe;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.register-text {
+  font-weight: bold;
+  color: #8d8d8d;
+}
+
+// - register & forgotten ----------------------------
+
+.register-field-box, .forgotten-field-box {
+  margin: 10px 0 15px 0;
+}
+
+.register-field, .forgotten-field {
+  width: 80%;
+  padding: 7px;
+  margin: 5px;
+  background-color: #e9e9e9;
+  border: solid 1px #dbdbdb;
+  border-radius: 2px;
+}
+
+.register-btn, .forgotten-btn {
+  width: 80%;
+  background-color: #337ab7;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+// - forgotten ---------------------------------------
+
+.forgotten.back-box {
+  margin: 0 auto auto;
+  background-color: white;
+  border: solid 1px #bebebe;
+  border-top: solid 1px #dfdfdf;
+  border-radius: 0 0 3px 3px;
+  width: 25%;
+  text-align: center;
+  padding: 10px;
+}
+
+.forgotten.back-box:hover {
+  background-color: #f2f2f2;
+}
+
+.forgotten.back-btn {
+  width: 100%;
+  margin: 0 auto auto;
+  text-align: center;
+  padding: 10px 0;
+  color: #2E2F30;
+  font-weight: bold;
+}
+
+.forgotten.back-btn:hover {
+  text-decoration: none;
+  color: #2E2F30;
+}
+
+.forgotten-box {
+  background-color: white;
+  margin: 30px auto auto;
+  padding: 20px;
+  width: 25%;
+  border: solid 1px #bebebe;
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+  text-align: center;
+}
+
+.forgotten-desc {
+  margin: 20px 0;
+  font-size: large;
+  font-weight: bold;
+}
+
+.forgotten-expl {
+  color: #999;
+}
+
+.forgotten.lock {
+  width: 40%;
+}
+
+// - user.edit ---------------------------------------
+
+.user-edit.profile-picture {
+  width: 50%;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.user-edit.edit-box {
+  background-color: white;
+  margin: 30px auto 30px auto;
+  padding: 20px;
+  width: 35%;
+  border: solid 1px #bebebe;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.user-edit.field {
+  width: 30%;
+  padding: 7px;
+  margin: 5px;
+  background-color: #e9e9e9;
+  border: solid 1px #dbdbdb;
+  border-radius: 2px;
+
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: flex-start;
+}
+
+.user-edit.field-text {
+  font-weight: bold;
+  padding: 12px 5px 0;
+  text-align: right;
+  flex: 0 0 160px;
+}
+
+.user-edit.field-row {
+  position: relative;
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+}
+
+.save-btn {
+  width: 50%;
+  background-color: #337ab7;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+// - user.show ---------------------------------------
+
+.user-show.header {
+  padding: 80px 10px 10px 20px;
+  color: white;
+  background-color: #378bc1;
+}
+
+.user-show.profile {
+  background-color: #fff;
+  margin: 0 15% 0
+}
+
+.user-show.profile-picture {
+  width: 100px;
+  height: 100px;
+  float: left;
+  border: 4px solid #f2f2f2;
+  border-radius: 1px;
+}
+
+.user-show.username {
+  position: relative;
+  float: left;
+  padding: 40px 0 0 10px;
+  color: white;
+  bottom: 25px;
+}
+
+.user-show.user {
+  pointer-events: none;
+  padding: 0 20px 0 20px;
+  position: absolute;
+  top: 60px;
+}
+
+.user-show.statistics {
+  border: 1px solid #e2e2e2;
+  border-top: none;
+}
+
+.user-show.stat-padding {
+  font-weight: bold;
+  display: inline-block;
+  padding: 10px 130px 10px 0;
+}
+
+.user-show.stat-cocktails {
+  display: inline-block;
+  padding: 10px 10px;
+  border-right: 1px solid #e2e2e2;
+  border-left: 1px solid #e2e2e2;
+}
+
+.user-show.stat-ingredients {
+  display: inline-block;
+  padding: 10px 10px;
+  margin: 0;
+  border-right: 1px solid #e2e2e2;
+}
+
+.user-show.stat-notifications {
+  display: inline-block;
+  padding: 10px 10px;
+  margin: 0;
+}
+
+.user-show.edit-btn {
+  display: inline-block;
+  padding: 10px 10px;
+  border-right: 1px solid #e2e2e2;
+  border-left: 1px solid #e2e2e2;
+}
+
+.user-show.clear-btn {
+  display: inline-block;
+  float: right;
+  padding: 10px 10px;
+  border-left: 1px solid #e2e2e2;
+}
+
+.user-show.edit-btn:hover {
+  background-color: #efefef;
+}
+
+.user-show.clear-btn:hover {
+  background-color: #efefef;
+}
+
+.user-show.notif-list {
+  padding: 20px;
+}
